@@ -1,5 +1,12 @@
-<h1>Hello Wolrd </h1>
-<% if user_signed_in? %>
+<h1>Hello World</h1>
+<br>
+Welcome, <%= current_user.email %>
+<br>
+<hr>
 
-  <%= button_to "Logout"%> 
-<% end %>
+ <br>
+  <%= link_to "Edit Account", edit_user_registration_path %>
+  <br>
+ <hr>
+ <br>
+  <%= button_to "Logout", destroy_user_session_path, method: :delete %>
